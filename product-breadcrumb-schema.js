@@ -66,3 +66,59 @@ document.head.appendChild(s2);
 }
 } catch (e) {}
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    if (location.pathname !== '/jizvy/') return;
+    var faq = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Jak dlouho trvá, než uvidím na jizvě zlepšení?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Při pravidelném denním používání bývá první viditelné zlepšení patrné po 2–3 měsících. Jizvy se hojí postupně, proto je důležitá trpělivost a pravidelnost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Můžu krém použít na čerstvou jizvu po operaci?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Krém je vhodné začít používat až ve chvíli, kdy je rána zcela zhojená a uzavřená. Pokud si nejste jistí stavem hojení, poraďte se se svým lékařem."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Je krém s aloe vera vhodný i na jizvy po akné?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano, hydratační a zklidňující složky pomáhají zjemnit strukturu pokožky i po zánětlivých jizvách po akné. U akutních zánětů doporučujeme nejprve počkat na zklidnění pokožky."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hodí se přípravek i pro citlivou pokožku?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Díky přírodnímu složení s aloe vera je krém vhodný i pro citlivější pleť. Jako u každého nového produktu doporučujeme nejprve vyzkoušet na malé ploše kůže."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Funguje krém i na starší, již zhojené jizvy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ano, pravidelná hydratace a péče mohou zlepšit vzhled i starších jizev, i když efekt bývá u déle trvajících jizev postupnější."
+          }
+        }
+        ]
+    };
+    var s3 = document.createElement('script');
+    s3.type = 'application/ld+json';
+    s3.text = JSON.stringify(faq);
+    document.head.appendChild(s3);
+  } catch (e) {}
+});
