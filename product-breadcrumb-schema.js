@@ -122,3 +122,26 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(s3);
   } catch (e) {}
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+try {
+if (location.pathname !== '/intimni-pece/') return;
+var faq2 = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Jsou přípravky v této kategorii léky?", "acceptedAnswer": {"@type": "Answer", "text": "Ne, jde o kosmetické přípravky určené k péči a hydrataci pokožky a sliznice v intimní oblasti. Nejsou určeny k léčbě onemocnění – při zdravotních potížích se prosím obraťte na lékaře nebo gynekologa."}},
+    {"@type": "Question", "name": "Jak často mohu krém používat?", "acceptedAnswer": {"@type": "Answer", "text": "Přípravky lze používat dle potřeby, obvykle 1–2× denně, jako součást běžné hydratační péče. Vždy se řiďte návodem k použití konkrétního produktu."}},
+    {"@type": "Question", "name": "Je krém vhodný i pro citlivou pokožku?", "acceptedAnswer": {"@type": "Answer", "text": "Ano, formule obsahuje Aloe vera a další zklidňující složky a neobsahuje parfemaci ani konzervanty. Přesto doporučujeme před prvním použitím vyzkoušet menší množství na malé ploše pokožky."}},
+    {"@type": "Question", "name": "Můžu přípravek používat i v období menopauzy nebo hormonálních změn?", "acceptedAnswer": {"@type": "Answer", "text": "Přípravek je vhodný k běžné hydratační péči v jakémkoli životním období. Pokud řešíte konkrétní zdravotní potíže spojené s hormonálními změnami, doporučujeme poradit se s gynekologem."}},
+    {"@type": "Question", "name": "Pomůže krém při pocitu vaginální suchosti?", "acceptedAnswer": {"@type": "Answer", "text": "Přípravek je určen k hydrataci a zklidnění pokožky a sliznice, takže může přispět ke zmírnění pocitu suchosti a k dennímu komfortu. Pokud suchost přetrvává nebo je spojena s dalšími obtížemi, doporučujeme konzultaci s gynekologem."}},
+    {"@type": "Question", "name": "Co dělat, pokud se po použití objeví podráždění?", "acceptedAnswer": {"@type": "Answer", "text": "V případě neobvyklé reakce přípravek přestaňte používat. Pokud potíže přetrvávají, obraťte se na svého lékaře nebo gynekologa."}}
+  ]
+};
+var s4 = document.createElement('script');
+s4.type = 'application/ld+json';
+s4.text = JSON.stringify(faq2);
+document.head.appendChild(s4);
+} catch (e) {}
+});
