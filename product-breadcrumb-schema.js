@@ -145,3 +145,25 @@ s4.text = JSON.stringify(faq2);
 document.head.appendChild(s4);
 } catch (e) {}
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    if (location.pathname !== '/') return;
+    var faqHome = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Co dělá aloe vera z Atlantia jinou?", "acceptedAnswer": {"@type": "Answer", "text": "Naše aloe vera pochází z vlastních ekologických plantáží na Kanárských ostrovech. Každá šarže je certifikována s obsahem acemannanu nad 1700 mg/l a garantovaně nízkým obsahem aloinu pod 10 ppm."}},
+          {"@type": "Question", "name": "Jsou produkty Atlantia vhodné pro citlivou pokožku?", "acceptedAnswer": {"@type": "Answer", "text": "Ano, produkty jsou 100% přírodní, bez parabenů a konzervantů, a mnohé jsou vhodné i pro velmi citlivou nebo podrážděnou pokožku. U konkrétních produktů doporučujeme vždy zkontrolovat složení a vyzkoušet nejprve na malé ploše kůže."}},
+          {"@type": "Question", "name": "Na co se aloe vera nejčastěji používá?", "acceptedAnswer": {"@type": "Answer", "text": "Aloe vera se využívá k hydrataci a zklidnění pokožky, péči o jizvy a popáleniny, intimní hygienu, i jako doplněk stravy ve formě nápojů. V naší nabídce najdete produkty pro tělo, obličej i specializovanou péči."}},
+          {"@type": "Question", "name": "Jsou produkty testované na zvířatech?", "acceptedAnswer": {"@type": "Answer", "text": "Ne, všechny produkty Atlantia jsou 100% netestované na zvířatech."}},
+          {"@type": "Question", "name": "Odkud pochází aloe vera použitá v produktech?", "acceptedAnswer": {"@type": "Answer", "text": "Pěstujeme ji na vlastních ekologických plantážích na Kanárských ostrovech ve Španělsku a kontrolujeme celý výrobní proces od pěstování až po balení hotových výrobků."}}
+            ]
+    };
+    var s7 = document.createElement('script');
+    s7.type = 'application/ld+json';
+    s7.text = JSON.stringify(faqHome);
+    document.head.appendChild(s7);
+  } catch (e) {}
+});
