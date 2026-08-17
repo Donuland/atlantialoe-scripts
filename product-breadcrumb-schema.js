@@ -167,3 +167,38 @@ document.addEventListener('DOMContentLoaded', function() {
     document.head.appendChild(s7);
   } catch (e) {}
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    if (location.pathname !== '/jizvy/') return;
+    var wp1 = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Péče o jizvy s aloe vera",
+        "url": "https://www.atlantialoe.cz/jizvy/",
+        "about": "Kosmetická péče o jizvy s produkty na bázi aloe vera"
+    };
+    var s8 = document.createElement('script');
+    s8.type = 'application/ld+json';
+    s8.text = JSON.stringify(wp1);
+    document.head.appendChild(s8);
+  } catch (e) {}
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  try {
+    if (location.pathname !== '/intimni-pece/') return;
+    var wp2 = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Intimní péče a hydratace s aloe vera",
+        "url": "https://www.atlantialoe.cz/intimni-pece/",
+        "about": "Kosmetická péče o intimní partie a hydratace s produkty na bázi aloe vera"
+    };
+    var s9 = document.createElement('script');
+    s9.type = 'application/ld+json';
+    s9.text = JSON.stringify(wp2);
+    document.head.appendChild(s9);
+  } catch (e) {}
+});
